@@ -3,10 +3,6 @@
     "name": "GitHub to DeepWiki Redirector",
     "version": "1.0",
     "description": "Adds a DeepWiki icon to GitHub repo homepages to quickly navigate.",
-    "permissions": [
-      "activeTab", // Needed for reacting to user clicks, though content script handles most logic
-      "scripting"  // Needed for injecting content scripts programmatically if required later, good practice
-    ],
     "icons": {
       "16": "icons/icon64.png",
       "48": "icons/icon128.png",
@@ -14,17 +10,16 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://github.com/*/*"], // Match any page under a user/org and repo
+        "matches": ["https://github.com/*/*"],
         "js": ["content.js"],
         "css": ["style.css"],
-        "run_at": "document_idle" // Run after the page is mostly loaded
+        "run_at": "document_idle"
       }
     ],
     "web_accessible_resources": [
       {
-        "resources": [ "icons/wiki-icon.png" ], // Make icon accessible to content script
+        "resources": [ "icons/wiki-icon.png" ],
         "matches": [ "https://github.com/*" ]
       }
     ]
   }
-  
