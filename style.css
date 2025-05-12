@@ -1,0 +1,19 @@
+#deepwiki-launcher-icon {
+    position: fixed; /* 固定在视口 */
+    bottom: 20px;    /* 距离底部 20px */
+    right: 20px;     /* 距离右侧 20px */
+    width: 32px;     /* 图标宽度 */
+    height: 32px;    /* 图标高度 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+    z-index: 9999;   /* 确保在页面其它元素之上 */
+    border-radius: 50%; /* 可选：圆形背景 */
+    background-color: rgba(255, 255, 255, 0.8); /* 可选：浅色背景，增加可见性 */
+    padding: 4px; /* 可选：增加一点内边距 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 可选：添加阴影 */
+    transition: transform 0.2s ease-in-out; /* 可选：平滑动画 */
+  }
+  
+  #deepwiki-launcher-icon:hover {
+    transform: scale(1.1); /* 可选：鼠标悬停时放大一点 */
+  }
+  
