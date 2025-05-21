@@ -6,14 +6,39 @@
     height: 32px;    /* 图标高度 */
     cursor: pointer; /* 鼠标悬停时显示手型光标 */
     z-index: 9999;   /* 确保在页面其它元素之上 */
-    border-radius: 50%; /* 可选：圆形背景 */
-    background-color: rgba(255, 255, 255, 0.8); /* 可选：浅色背景，增加可见性 */
-    padding: 4px; /* 可选：增加一点内边距 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 可选：添加阴影 */
-    transition: transform 0.2s ease-in-out; /* 可选：平滑动画 */
+    border-radius: 8px; 
+    background-color: rgba(240, 240, 240, 0.9); 
+    padding: 4px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   
   #deepwiki-launcher-icon:hover {
-    transform: scale(1.1); /* 可选：鼠标悬停时放大一点 */
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
   }
+
+#deepwiki-launcher-icon:active {
+  transform: scale(1.05) translateY(-1px); 
+  background-color: rgba(225, 225, 225, 0.95); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  transition-duration: 0.05s; 
+}
+
+@media (prefers-color-scheme: dark) {
+  #deepwiki-launcher-icon {
+    background-color: rgba(40, 42, 45, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  #deepwiki-launcher-icon:hover {
+    background-color: rgba(55, 58, 62, 0.95);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+  }
+
+  #deepwiki-launcher-icon:active {
+    background-color: rgba(30, 32, 35, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+}
   
