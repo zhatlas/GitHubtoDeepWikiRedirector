@@ -6,7 +6,7 @@
     height: 32px;    /* 图标高度 */
     cursor: pointer; /* 鼠标悬停时显示手型光标 */
     z-index: 9999;   /* 确保在页面其它元素之上 */
-    border-radius: 8px; 
+    border-radius: 50%; 
     background-color: rgba(240, 240, 240, 0.9); 
     padding: 4px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
