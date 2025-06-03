@@ -21,7 +21,30 @@ function isGitHubRepoHomepage(url) {
       wikiIcon.id = 'deepwiki-launcher-icon';
       wikiIcon.src = iconUrl;
       wikiIcon.title = 'Open in DeepWiki'; // Tooltip on hover
-  
+      
+      // Ensure styles are applied immediately
+      wikiIcon.style.position = 'fixed';
+      wikiIcon.style.bottom = '20px';
+      wikiIcon.style.right = '20px';
+      wikiIcon.style.width = '32px';
+      wikiIcon.style.height = '32px';
+      wikiIcon.style.cursor = 'pointer';
+      wikiIcon.style.zIndex = '9999';
+      wikiIcon.style.borderRadius = '50%';
+      wikiIcon.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+      wikiIcon.style.padding = '4px';
+      wikiIcon.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+      wikiIcon.style.transition = 'transform 0.2s ease-in-out';
+
+      // Add hover effects
+      wikiIcon.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+      });
+      
+      wikiIcon.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+
       wikiIcon.onclick = function() {
         // Replace github.com with deepwiki.com
         // Using URL constructor for potentially more robust parsing if needed later
@@ -76,5 +99,3 @@ function isGitHubRepoHomepage(url) {
   
   // You might also want to listen to 'popstate' event for back/forward navigation
   window.addEventListener('popstate', createDeepWikiLink);
-  
-  
